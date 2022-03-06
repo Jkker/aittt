@@ -27,7 +27,7 @@ const BG_COLORS = [
 
 const getBgColor = (title: string) => BG_COLORS[Math.abs(hash(title)) % BG_COLORS.length]
 
-const Avatar = ({ avatar, name, width = 96, height = 96, className }) => (
+const Avatar = ({ avatar, name, width = 96, height = 96, className = '' }) => (
   <span className="border-6 mb-4 rounded-full border-gray-100">
     {avatar ? (
       <Image
