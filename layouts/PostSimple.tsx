@@ -17,7 +17,7 @@ interface Props {
 }
 
 export default function PostLayout({ frontMatter, next, prev, children }: Props) {
-  const { slug, date, title } = frontMatter
+  const { slug } = frontMatter
 
   return (
     <SectionContainer>

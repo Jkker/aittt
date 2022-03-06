@@ -42,6 +42,7 @@ export function dateSortDesc(a: string, b: string) {
   return 0
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function getFileBySlug<T>(
   type: 'authors' | 'posts' | 'info',
   slug: string | string[]
@@ -65,6 +66,7 @@ export async function getFileBySlug<T>(
     source,
     // mdx imports can be automatically source from the components directory
     cwd: path.join(root, 'components'),
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     xdmOptions(options, frontmatter) {
       // this is the recommended way to add custom remark/rehype plugins:
       // The syntax might look weird, but it protects you in case we add/remove

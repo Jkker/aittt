@@ -1,6 +1,7 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
+import { formatSlug, getFileBySlug, getFiles } from '@/lib/mdx'
 
 const DEFAULT_LAYOUT = 'AuthorLayout'
 
