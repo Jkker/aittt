@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
-// import MobileNav from './MobileNav'
+import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import { ReactNode } from 'react'
 
@@ -27,9 +27,7 @@ const LayoutWrapper = ({ children }: Props) => {
                   width={36}
                 />
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="-mb-1 hidden text-2xl font-semibold sm:block">
-                    {siteMetadata.headerTitle}
-                  </div>
+                  <div className="-mb-1 text-2xl font-semibold ">{siteMetadata.headerTitle}</div>
                 ) : (
                   siteMetadata.headerTitle
                 )}
@@ -49,7 +47,7 @@ const LayoutWrapper = ({ children }: Props) => {
               ))}
             </div>
             <ThemeSwitch />
-            {/* <MobileNav /> */}
+            <MobileNav className="sm:hidden" />
           </div>
         </header>
         <main className="mb-auto">{children}</main>

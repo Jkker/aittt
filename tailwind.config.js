@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       boxShadow: {
         md: 'rgb(0 0 0 / 6%) 0px 9px 24px',
+        dark: 'rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px',
       },
       spacing: {
         '9/16': '56.25%',

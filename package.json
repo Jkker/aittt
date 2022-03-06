@@ -14,8 +14,9 @@
     "post": "node ./scripts/compose.js"
   },
   "dependencies": {
-    "@mailchimp/mailchimp_marketing": "^3.0.74",
     "@fontsource/inter": "4.5.2",
+    "@headlessui/react": "^1.5.0",
+    "@mailchimp/mailchimp_marketing": "^3.0.74",
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.2",
