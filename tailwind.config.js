@@ -26,8 +26,8 @@ module.exports = {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        // primary: colors.cyan,
-        primary: {
+        primary: colors.amber,
+        /* primary: {
           100: '#d2f2fc',
           200: '#a5e5f9',
           300: '#79d7f7',
@@ -37,7 +37,7 @@ module.exports = {
           700: '#0a769a',
           800: '#064f66',
           900: '#032733',
-        },
+        }, */
         //@ts-ignore
         gray: colors.neutral, // TODO: Remove ts-ignore after tw types gets updated to v3
       },
@@ -73,7 +73,7 @@ module.exports = {
               backgroundColor: theme('colors.gray.800'),
             },
             code: {
-              color: theme('colors.pink.500'),
+              color: theme('colors.orange.500'),
               backgroundColor: theme('colors.gray.100'),
               paddingLeft: '4px',
               paddingRight: '4px',

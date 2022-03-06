@@ -21,13 +21,13 @@ const LayoutWrapper = ({ children }: Props) => {
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between space-x-3">
                 <Image
-                  src="/favicons/android-chrome-192x192.png"
+                  src="/static/favicons/android-chrome-192x192.png"
                   alt="AIT Tips"
                   height={36}
                   width={36}
                 />
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden text-2xl font-semibold sm:block">
+                  <div className="-mb-1 hidden text-2xl font-semibold sm:block">
                     {siteMetadata.headerTitle}
                   </div>
                 ) : (
