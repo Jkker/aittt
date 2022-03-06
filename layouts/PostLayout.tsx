@@ -138,8 +138,8 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 )}
               </div>
               <div className="pt-4 xl:pt-8">
-                <Link href="/post" className="link">
-                  &larr; Back to the post
+                <Link href="/posts" className="link">
+                  &larr; Back to post list
                 </Link>
               </div>
             </footer>
