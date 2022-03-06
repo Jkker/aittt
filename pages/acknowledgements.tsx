@@ -2,7 +2,8 @@ import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getFileBySlug } from '@/lib/mdx'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
-
+import { PageSEO } from '@/components/SEO'
+import siteMetadata from '@/data/siteMetadata'
 const DEFAULT_LAYOUT = 'PostSimple'
 
 // @ts-ignore
@@ -18,10 +19,16 @@ export default function About({ legalDetails }: InferGetStaticPropsType<typeof g
   const { mdxSource, frontMatter } = legalDetails
 
   return (
-    <MDXLayoutRenderer
-      layout={frontMatter.layout || DEFAULT_LAYOUT}
-      mdxSource={mdxSource}
-      frontMatter={frontMatter}
-    />
+    <>
+      <PageSEO
+        title={`Acknowledgements - ${siteMetadata.title}`}
+        description={siteMetadata.description}
+      />
+      <MDXLayoutRenderer
+        layout={frontMatter.layout || DEFAULT_LAYOUT}
+        mdxSource={mdxSource}
+        frontMatter={frontMatter}
+      />
+    </>
   )
 }

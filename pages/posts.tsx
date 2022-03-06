@@ -29,7 +29,7 @@ export default function Post({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <PageSEO title={`Post - ${siteMetadata.author}`} description={siteMetadata.description} />
+      <PageSEO title={`Post - ${siteMetadata.title}`} description={siteMetadata.description} />
       <ListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
