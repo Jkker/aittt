@@ -1,15 +1,14 @@
-import { getAllFilesFrontMatter, getFiles } from '@/lib/mdx'
-import siteMetadata from '@/data/siteMetadata'
-import { PageSEO } from '@/components/SEO'
-import { GetStaticProps, InferGetStaticPropsType } from 'next'
-import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
-import Link from '@/components/Link'
 import Avatar from '@/components/AvatarImage'
+import Link from '@/components/Link'
+import { PageSEO } from '@/components/SEO'
+import siteMetadata from '@/data/siteMetadata'
+import { getAllAuthorFilesFrontMatter } from '@/lib/mdx'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
+
 export const getStaticProps: GetStaticProps<{
   authors
 }> = async () => {
-  const authors = await getAllFilesFrontMatter('authors')
-
+  const authors = await getAllAuthorFilesFrontMatter('authors')
   return { props: { authors } }
 }
 
@@ -41,12 +40,6 @@ export default function Post({ authors }: InferGetStaticPropsType<typeof getStat
         </div>
       </div>
       {/* <pre>{JSON.stringify(authors, null, 2)}</pre> */}
-      {/* <ListLayout
-        posts={posts}
-        initialDisplayPosts={initialDisplayPosts}
-        pagination={pagination}
-        title="All Posts"
-      /> */}
     </>
   )
 }
