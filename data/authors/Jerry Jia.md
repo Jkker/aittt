@@ -6,6 +6,7 @@ company: New York University
 email: jerryjia@nyu.edu
 linkedin: https://www.linkedin.com/in/jerrykjia
 github: https://github.com/Jkker
+website: https://www.jerryjia.com
 ---
 
 ### 🙋‍ Who am I
