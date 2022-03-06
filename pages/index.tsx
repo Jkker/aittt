@@ -21,7 +21,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+        <div className="space-y-2 pt-6 md:h-44 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest
           </h1>
@@ -36,7 +36,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             return (
               <li
                 key={slug}
-                className="py-12 px-6 shadow-md transition hover:shadow-xl focus:shadow-xl dark:bg-gray-800"
+                className="py-8 px-6 shadow-md transition hover:shadow-xl focus:shadow-xl dark:bg-gray-800"
               >
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">

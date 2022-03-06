@@ -25,7 +25,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
   return (
     <>
       <div className="">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+        <div className="space-y-8 pt-6 pb-8 md:h-44 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
           </h1>
@@ -60,7 +60,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             return (
               <li
                 key={slug}
-                className="px-6 py-8 shadow-md transition hover:shadow-xl focus:shadow-xl dark:bg-gray-800"
+                className="py-8 px-6 shadow-md transition hover:shadow-xl focus:shadow-xl dark:bg-gray-800"
               >
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
@@ -73,7 +73,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
-                          <h2 className="mb-1 text-2xl font-bold leading-8 tracking-tight">
+                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
                               href={`/posts/${slug}`}
                               className="text-gray-900 dark:text-gray-100"
@@ -94,7 +94,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                       <div className="text-base font-medium leading-6">
                         <Link
                           href={`/posts/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                          className="link"
                           aria-label={`Read "${title}"`}
                         >
                           Read more &rarr;
