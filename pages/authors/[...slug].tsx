@@ -1,12 +1,6 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
-import fs from 'fs'
-import PageTitle from '@/components/PageTitle'
-import generateRss from '@/lib/generate-rss'
-import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
-import { PostFrontMatter } from 'types/PostFrontMatter'
-import { Toc } from 'types/Toc'
 
 const DEFAULT_LAYOUT = 'AuthorLayout'
 
