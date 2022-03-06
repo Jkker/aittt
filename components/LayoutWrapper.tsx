@@ -17,7 +17,7 @@ const LayoutWrapper = ({ children }: Props) => {
   return (
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
-        <header className="flex items-center justify-between py-10">
+        <header className="flex items-center justify-between py-4 md:py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between space-x-3">
@@ -50,7 +50,7 @@ const LayoutWrapper = ({ children }: Props) => {
               ))}
             </div>
             <ThemeSwitch />
-            <MobileNav />
+            {/* <MobileNav /> */}
           </div>
         </header>
         <main className="mb-auto">{children}</main>
