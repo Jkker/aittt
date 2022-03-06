@@ -1,7 +1,7 @@
 ---
 name: Jerry Jia
-avatar: /static/images/jerryjia-avatar.jpeg
-occupation: Major in Computer Science & Economics
+avatar:
+occupation: Tutor
 company: New York University
 email: jerryjia@nyu.edu
 linkedin: https://www.linkedin.com/in/jerrykjia

@@ -114,12 +114,18 @@ export async function getFileBySlug<T>(
   }
 }
 
-export async function getAllFilesFrontMatter(folder: 'posts') {
+function isPostFrontMatter(
+  frontMatter: PostFrontMatter | AuthorFrontMatter
+): frontMatter is PostFrontMatter {
+  return (frontMatter as PostFrontMatter).title !== undefined
+}
+
+export async function getAllFilesFrontMatter(folder: 'posts' | 'authors') {
   const prefixPaths = path.join(root, 'data', folder)
 
   const files = getAllFilesRecursively(prefixPaths)
 
-  const allFrontMatter: PostFrontMatter[] = []
+  const allFrontMatter: (PostFrontMatter | AuthorFrontMatter)[] = []
 
   files.forEach((file: string) => {
     // Replace is needed to work on Windows
@@ -128,6 +134,7 @@ export async function getAllFilesFrontMatter(folder: 'posts') {
     if (path.extname(fileName) !== '.md' && path.extname(fileName) !== '.mdx') {
       return
     }
+    if (fileName.includes('default')) return
     const source = fs.readFileSync(file, 'utf8')
     const matterFile = matter(source)
     const frontmatter = matterFile.data as AuthorFrontMatter | PostFrontMatter
@@ -136,9 +143,21 @@ export async function getAllFilesFrontMatter(folder: 'posts') {
         ...frontmatter,
         slug: formatSlug(fileName),
         date: frontmatter.date ? new Date(frontmatter.date).toISOString() : null,
-      })
+      } as PostFrontMatter)
+    } else if ('name' in frontmatter) {
+      allFrontMatter.push({
+        ...frontmatter,
+        slug: formatSlug(fileName),
+      } as AuthorFrontMatter)
     }
   })
-
-  return allFrontMatter.sort((a, b) => dateSortDesc(a.date, b.date))
+  if (allFrontMatter.every((frontMatter) => isPostFrontMatter(frontMatter))) {
+    return allFrontMatter.sort((a, b) =>
+      dateSortDesc((a as PostFrontMatter).date, (b as PostFrontMatter).date)
+    )
+  } else {
+    return allFrontMatter.sort((a, b) =>
+      (a as AuthorFrontMatter).name > (b as AuthorFrontMatter).name ? -1 : 1
+    )
+  }
 }

@@ -1,6 +1,6 @@
 ---
 name: Julius Nedzinskas
-occupation:
+occupation: Tutor
 company: New York University
 email:
 linkedin:
