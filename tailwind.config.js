@@ -10,6 +10,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      boxShadow: {
+        md: 'rgb(0 0 0 / 6%) 0px 9px 24px',
+      },
       spacing: {
         '9/16': '56.25%',
       },
