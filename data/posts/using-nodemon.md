@@ -1,10 +1,10 @@
 ---
 title: Using nodemon to run your app
 date: '2022-03-01'
-tags: ['dev environment', 'backend']
+tags: ['environment', 'backend']
 draft: false
 authors: ['Jerry Jia']
-summary: Nodemon is a tool that will automatically restart your Node.js application when it changes.
+summary: Nodemon can automatically restart your Node.js application when your code changes.
 ---
 
 If you are tired of **manually restarting** your app EVERY time you **edit a line of code**, try `nodemon`. It monitors for any changes in your source and **automatically restarts** your server.
