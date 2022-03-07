@@ -1,3 +1,5 @@
+# Getting Started
+
 ## Installation
 
 ```sh
@@ -16,17 +18,17 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Post
+# Posting Content
 
 Posts are located in `data/posts`.
 
-### Write a post
+## Write a post
 
 Run `npm run compose` to bootstrap a new post.
 
 Follow the interactive prompt to generate a post with pre-filled front matter.
 
-### Frontmatter
+## Frontmatter
 
 Frontmatter follows [Hugo's standards](https://gohugo.io/content-management/front-matter/).
 
@@ -62,9 +64,19 @@ canonicalUrl: https://aittt.vercel.app
 ---
 ```
 
-### MDX Format
+## MDX Format
 
-[MDX](https://mdxjs.com/) allows you to use JSX in your markdown content. You can import components, such as interactive charts or alerts, and embed them within your content. This makes writing long-form content with components a blast. 🚀
+[MDX](https://mdxjs.com/) allows you to use JSX in your markdown content. You can import components, such as interactive charts or alerts, and embed them within your content. This makes writing long-form content with components a blast.
+
+# Development
+
+## Framework
+
+This site is built with [NextJS](https://nextjs.org/) to leverage the power of SSG for MDX rendering. 
+
+## Deployment
+
+This project is currently deployed with Vercel at [aittt.vercel.app](https://aittt.vercel.app/). A push event to this repository will automatically trigger the build and deployment pipeline. This process usually takes 1-2 minutes. 
 
 ## Extend / Customize
 
