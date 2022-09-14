@@ -6,10 +6,10 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<string>
 ) {
-  const name = req.query.name as string;
-  const animal = avatar(name, {
+  const seed = (req.query.seed as string) ?? Math.random() + "";
+  const animal = avatar(seed, {
     size: 256,
-    // blackout: false,
+    blackout: false,
   });
   res
     .writeHead(200, {
